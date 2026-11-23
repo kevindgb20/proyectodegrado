@@ -31,3 +31,4 @@ que caen en bucle; luces PAR que reaccionan al micrófono («esto es reaccionar�
 árbol de objetivos; objetivos desplegables; In-Out interactivo; tarjetas de testeos que se voltean; comparación de
 recursos del experto antes y después; gráficas con los datos reales de los formularios; **mapa del prompt sincronizado
 con Renegade** (22 entradas, dos reflectores simulados); visor de videos y de imágenes a pantalla completa.
+xd

@@ -3,8 +3,8 @@
 import { useEffect, useRef } from "react";
 
 const TEXT =
-  "La luz no decora la música: la traduce. Cada golpe, cada silencio y cada voz se convierte en una decisión de iluminación que se puede medir, validar y repetir.";
-const KEY = new Set(["traduce.", "golpe,", "silencio", "voz", "medir,", "validar", "repetir."]);
+  "Una rutina de Loopstation traducida a luz por un sistema que, por primera vez, recibe lo que el artista quiere decir.";
+const KEY = new Set(["traducida", "luz", "primera", "quiere", "decir."]);
 
 /** Las palabras se encienden una a una al hacer scroll, como un fader que sube. */
 export default function Manifesto() {
@@ -22,10 +22,7 @@ export default function Manifesto() {
       const vh = window.innerHeight;
       const p = Math.min(1, Math.max(0, (vh * 0.85 - r.top) / (r.height + vh * 0.45)));
       const lit = p * spans.length;
-      spans.forEach((s, i) => {
-        const v = Math.min(1, Math.max(0, lit - i));
-        s.style.setProperty("--on", v.toFixed(3));
-      });
+      spans.forEach((s, i) => s.style.setProperty("--on", Math.min(1, Math.max(0, lit - i)).toFixed(3)));
     };
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update);
@@ -42,6 +39,7 @@ export default function Manifesto() {
 
   return (
     <section className="section manifesto">
+      <p className="kicker-d center">Proyecto de grado · 2026</p>
       <p ref={ref} className="manifesto-text">
         {words.map((w, i) => (
           <span key={i} className={KEY.has(w) ? "key" : undefined}>

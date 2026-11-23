@@ -335,10 +335,10 @@ export const engine = new Engine();
 // ---------- Papeles de las luces ----------
 
 export const ROLE_COLORS = {
-  principal: [124, 92, 255],
-  acompañamiento: [0, 209, 178],
-  acentos: [255, 244, 222],
-  fondo: [255, 176, 32],
+  principal: [237, 28, 46],
+  acompañamiento: [124, 92, 240],
+  acentos: [255, 214, 222],
+  fondo: [150, 12, 30],
 } as const;
 
 export type Role = keyof typeof ROLE_COLORS;

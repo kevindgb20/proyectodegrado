@@ -83,7 +83,7 @@ export default function StageCanvas() {
       mouse.w *= 0.995;
 
       ctx.globalCompositeOperation = "source-over";
-      ctx.fillStyle = "#06070b";
+      ctx.fillStyle = "#050507";
       ctx.fillRect(0, 0, W, H);
 
       const floorY = H * 0.9;
@@ -191,23 +191,41 @@ export default function StageCanvas() {
         ctx.fillRect(px, py, d.s, d.s);
       }
 
-      // Espectro en el borde inferior.
+      // Silueta del intérprete detrás de la mesa, con los pads del Loopstation encendiéndose en bucle.
       ctx.globalCompositeOperation = "source-over";
-      const n = f.spectrum.length;
-      const bw = W / n;
-      for (let i = 0; i < n; i++) {
-        const v = f.spectrum[i];
-        const h = v * H * 0.16;
-        const c = i < n * 0.2 ? ROLE_COLORS.principal : i < n * 0.55 ? ROLE_COLORS.acompañamiento : ROLE_COLORS.acentos;
-        ctx.fillStyle = rgba(c, 0.12 + v * 0.3);
-        ctx.fillRect(i * bw + 1, H - h, bw - 2, h);
+      const cx = W * 0.66;
+      const u = Math.min(W, H * 1.4) / 900;
+      const tableY = floorY - 70 * u;
+      ctx.fillStyle = "#020203";
+      ctx.beginPath();
+      ctx.arc(cx, tableY - 150 * u, 26 * u, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.moveTo(cx - 34 * u, tableY - 118 * u);
+      ctx.lineTo(cx + 34 * u, tableY - 118 * u);
+      ctx.lineTo(cx + 62 * u, tableY + 4 * u);
+      ctx.lineTo(cx - 62 * u, tableY + 4 * u);
+      ctx.closePath();
+      ctx.fill();
+      ctx.fillRect(cx - 150 * u, tableY, 300 * u, 14 * u);
+      ctx.fillRect(cx - 140 * u, tableY + 14 * u, 8 * u, floorY - tableY - 14 * u);
+      ctx.fillRect(cx + 132 * u, tableY + 14 * u, 8 * u, floorY - tableY - 14 * u);
+      const step = Math.floor(f.t / 0.6) % 5;
+      for (let k = 0; k < 5; k++) {
+        const on = k <= step ? 1 : 0.25;
+        const px = cx - 110 * u + k * 46 * u;
+        ctx.fillStyle = rgba(ROLE_COLORS.principal, (0.35 + 0.65 * on) * (0.4 + 0.6 * Math.max(lv.principal, 0.3)));
+        ctx.shadowColor = rgba(ROLE_COLORS.principal, 0.9 * on);
+        ctx.shadowBlur = 14 * on * u;
+        ctx.fillRect(px, tableY - 9 * u, 36 * u, 7 * u);
       }
+      ctx.shadowBlur = 0;
 
-      // Truss.
-      ctx.fillStyle = "#10131b";
+      // Barra roja superior del escenario.
+      ctx.fillStyle = "#0b0b0e";
       ctx.fillRect(0, 0, W, 8);
       for (const b of beams) {
-        ctx.fillStyle = "#1d2230";
+        ctx.fillStyle = "#16161b";
         ctx.fillRect(b.sx - 9, 0, 18, 12);
       }
     });

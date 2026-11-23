@@ -3,3 +3,10 @@ node_modules/
 out/
 next-env.d.ts
 *.tsbuildinfo
+
+# Videos convertidos (pesados; ver README)
+public/media/v/*.mp4
+!public/media/v/mvp.mp4
+!public/media/v/renegade-gbb25.mp4
+# Material original (5,5 GB)
+Proyecto de grado/

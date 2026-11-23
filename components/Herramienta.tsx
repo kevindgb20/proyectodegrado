@@ -170,7 +170,7 @@ export default function Herramienta() {
             ))}
           </ul>
           <p className="muted small">
-            Transcripción literal, en inglés y en japonés: <A l="C" />. Se reproduce con fines de
+            Transcripción literal, en inglés y en japonés, con su versión en español: <A l="C" />. Se reproduce con fines de
             análisis académico; su autoría corresponde a Mahiro.
           </p>
         </Reveal>

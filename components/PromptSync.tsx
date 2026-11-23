@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { PROMPT_VIDEO } from "@/lib/drive";
 import { CUES, PIECE_LEN, videoSrc, type Cue } from "@/lib/media";
 import { PlayIcon } from "./VideoPlayer";
 
@@ -75,7 +76,7 @@ export default function PromptSync() {
         <div className="ps-video">
           <video
             ref={video}
-            src={started ? s.src : undefined}
+            src={started ? PROMPT_VIDEO : undefined}
             poster={s.poster}
             controls={started}
             playsInline

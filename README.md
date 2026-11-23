@@ -16,12 +16,12 @@ npm run build && npm run start
 Videos · Imágenes · 10 Referencias. Los anexos A–M y sus videos van junto a la parte que documentan.
 
 ## Material
-Videos, formatos e imágenes de los anexos se sirven desde las carpetas compartidas de **Google Drive** del libro. Los IDs
-están en `lib/drive.ts`. Si una carpeta deja de ser pública, su material deja de verse en la página.
+Todo el material se sirve desde una carpeta compartida de **Google Drive**:
+https://drive.google.com/drive/folders/1lAJBFZiE5tYgUtDLhGYG6wx6I4Yt25zS — los IDs están en `lib/drive.ts`. Si deja de ser
+pública o se borra y vuelve a subir un archivo, hay que actualizar su ID.
 
-Aún no están en Drive y se sirven desde `public/media/`: los videos `resultado`, `proceso`, `mvp` y `renegade-gbb25`,
-once piezas gráficas y el libro en PDF. Para pasar un video, se añade su ID en `VIDEO_IDS` (excepto `renegade-gbb25`:
-el mapa del prompt necesita un archivo propio, porque el reproductor de Drive no informa en qué segundo va).
+Excepciones: `public/media/v/renegade-gbb25.mp4` es local porque el mapa del prompt necesita saber el segundo exacto y el
+reproductor de Drive no lo informa; y el Anexo M usa la carpeta de Drive que cita el libro, porque no está en la nueva.
 
 `Proyecto de grado/` guarda los originales; la página no la usa.
 

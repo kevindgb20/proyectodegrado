@@ -20,12 +20,7 @@ export interface VideoGroup {
   videos: Video[];
 }
 
-const v = (id: string) => {
-  const drive = VIDEO_IDS[id];
-  return drive
-    ? { drive, src: "", poster: driveImage(drive, 800) }
-    : { drive: undefined, src: `/media/v/${id}.mp4`, poster: `/media/v/${id}.jpg` };
-};
+const v = (id: string) => ({ drive: VIDEO_IDS[id], poster: driveImage(VIDEO_IDS[id], 800) });
 export const videoSrc = v;
 
 export const PRODUCTO: Video[] = [
@@ -194,19 +189,19 @@ export const CUES: Cue[] = [
 ];
 export const PIECE_LEN = 218.2;
 
-export const ANEXOS: { l: string; t: string; d: string; url: string }[] = [
-  { l: "A", t: "Bitácora de las pruebas controladas del sistema comercial", d: "Registro del montaje con reflectores PAR LED e interfaz USB-DMX y de las pruebas con pistas grabadas y con señal en vivo.", url: "https://drive.google.com/drive/folders/1cViARshEPD1rwyVR9vPMflIXcSmZoTEg?usp=sharing" },
-  { l: "B", t: "Entrevista al creador de MyStrow", d: "Transcripción de la entrevista estructurada a Nicolas Prieto. Confirma que el sistema opera por reglas predefinidas.", url: "https://drive.google.com/drive/folders/1Dyptv8bRZFCPdfgPXZobaitvfkCXZ5bi?usp=sharing" },
-  { l: "C", t: "Letra de «Renegade», de Mahiro", d: "Transcripción literal del texto cantado, en inglés y en japonés.", url: "https://drive.google.com/drive/folders/1fZa4asakI6hJRewH4jB357jDjiz3l4VX?usp=sharing" },
-  { l: "D", t: "Testeo 1 · Artista · Sistema comercial", d: "Formato de declaración de intención y lectura diligenciado por Yiro.", url: "https://drive.google.com/drive/folders/1ZJXm-93rEVttTrerH_xfo-fb9vuqsh4u?usp=sharing" },
-  { l: "E", t: "Testeo 2 · Experto · Sistema comercial", d: "Formato de valoración diligenciado por Roberto Castrillón.", url: "https://drive.google.com/drive/folders/11cJIpTy_ztpmmCJO9WkBheTyte1_5g6Q?usp=sharing" },
-  { l: "F", t: "Testeo 3 · Usuario · Sistema comercial", d: "Respuestas del formulario en línea, trece participantes, sin editar.", url: "https://drive.google.com/drive/folders/13DWIUNnjS3dBSj0EA3tHKR7K1dTXHdys?usp=sharing" },
-  { l: "G", t: "Testeo 4 · Artista · Herramienta propia", d: "Parte A respondida solo con el audio y parte B después de ver la iluminación.", url: "https://drive.google.com/drive/folders/1lApuyaaYmlwQy4E9Bmt7EE7OuGSvPsFj?usp=sharing" },
-  { l: "H", t: "Testeo 5 · Experto · Herramienta propia", d: "Valoración de Roberto Castrillón sobre la experiencia construida con la herramienta.", url: "https://drive.google.com/drive/folders/17AMvQ9Y_OtObxfUa5iVq1lPjOdxY0rbR?usp=sharing" },
-  { l: "I", t: "Testeo 6 · Usuario · Herramienta propia", d: "Respuestas del formulario en línea, diez participantes, sin editar.", url: "https://drive.google.com/drive/folders/1ljKtIkyM_itIwhfsVhVMa1zTxIxYuI1p?usp=sharing" },
-  { l: "J", t: "Desarrollo y pruebas de la herramienta", d: "Registro del desarrollo, capturas del análisis por secciones y versiones sucesivas del prompt.", url: "https://drive.google.com/drive/folders/1GqJvVg4G-sV39bjnh6qy0lhRBlrM2TfR?usp=sharing" },
-  { l: "K", t: "Prompt de «Renegade»", d: "Las veintidós entradas que cubren los 218,2 segundos de la pieza, con sus versiones anteriores.", url: "https://drive.google.com/drive/folders/1Rdig452UNgM9w0w1WVEF1LgrG1vqCLS5?usp=sharing" },
-  { l: "L", t: "Registro audiovisual de la experiencia", d: "Video de la experiencia escénica sobre «Renegade», producto final del proyecto.", url: "https://drive.google.com/drive/folders/1STvQXPTshIpl4iVaQW7Fg25v5rSlDdo9?usp=sharing" },
+export const ANEXOS: { l: string; t: string; d: string; url?: string }[] = [
+  { l: "A", t: "Bitácora de las pruebas controladas del sistema comercial", d: "Registro del montaje con reflectores PAR LED e interfaz USB-DMX y de las pruebas con pistas grabadas y con señal en vivo.", url: "https://drive.google.com/drive/folders/1DmYrB7TNNPeToE09lJogUynatenT-ohT" },
+  { l: "B", t: "Entrevista al creador de MyStrow", d: "Transcripción de la entrevista estructurada a Nicolas Prieto. Confirma que el sistema opera por reglas predefinidas.", url: "https://drive.google.com/drive/folders/1FTI5AJJk3d3CE_AhY4dTb1iCxITaWfkN" },
+  { l: "C", t: "Letra de «Renegade», de Mahiro", d: "Transcripción literal del texto cantado, en inglés y en japonés.", url: "https://drive.google.com/drive/folders/1zGkEh5q5jrq88iTW0AiV0u6jEln9zk9z" },
+  { l: "D", t: "Testeo 1 · Artista · Sistema comercial", d: "Formato de declaración de intención y lectura diligenciado por Yiro.", url: "https://drive.google.com/drive/folders/1eSMMBE4Dnu-p5plLdTiTvHuv8tKs-Ud0" },
+  { l: "E", t: "Testeo 2 · Experto · Sistema comercial", d: "Formato de valoración diligenciado por Roberto Castrillón.", url: "https://drive.google.com/drive/folders/1QLLTcDqLfNzAPZQFzwnRD6AAZIzCfjF4" },
+  { l: "F", t: "Testeo 3 · Usuario · Sistema comercial", d: "Respuestas del formulario en línea, trece participantes, sin editar.", url: "https://drive.google.com/drive/folders/10oJlF28yEVlXucabKbVk1L1nZiVZxwA7" },
+  { l: "G", t: "Testeo 4 · Artista · Herramienta propia", d: "Parte A respondida solo con el audio y parte B después de ver la iluminación.", url: "https://drive.google.com/drive/folders/142tXftz7SYY9o52F3Ts5v9CvHd0kwtFW" },
+  { l: "H", t: "Testeo 5 · Experto · Herramienta propia", d: "Valoración de Roberto Castrillón sobre la experiencia construida con la herramienta.", url: "https://drive.google.com/drive/folders/13y8oAa4peQ6haaRcBN4MOkTn1ZmU_3ia" },
+  { l: "I", t: "Testeo 6 · Usuario · Herramienta propia", d: "Respuestas del formulario en línea, diez participantes, sin editar.", url: "https://drive.google.com/drive/folders/1mxykgCIcRg8Q4F5a-Vi21lNJDdET6L-N" },
+  { l: "J", t: "Desarrollo y pruebas de la herramienta", d: "Registro del desarrollo, capturas del análisis por secciones y versiones sucesivas del prompt.", url: "https://drive.google.com/drive/folders/10hKne0lnCMNK53BEB_WlrtvEOz8IGcT-" },
+  { l: "K", t: "Prompt de «Renegade»", d: "Las veintidós entradas que cubren los 218,2 segundos de la pieza, con sus versiones anteriores." },
+  { l: "L", t: "Registro audiovisual de la experiencia", d: "Video de la experiencia escénica sobre «Renegade», producto final del proyecto.", url: "https://drive.google.com/drive/folders/1ctOeLLAuut6Az4lwh0hcOYkauNClHiNb" },
   { l: "M", t: "Hoja de vida y portafolio", d: "Kevin Daniel Guzmán Bernal.", url: "https://drive.google.com/drive/folders/1UXflZsbxVgFmQVZr1oP2nqjDouDq-ilQ?usp=sharing" },
 ];
 

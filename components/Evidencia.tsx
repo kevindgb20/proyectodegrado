@@ -12,7 +12,7 @@ import { VideoGrid } from "./VideoPlayer";
 export function A({ l, children }: { l: string; children?: ReactNode }) {
   const a = anexo(l);
   const file = ANEXO_FILES[l];
-  const href = file ? driveView(file.id) : a.url;
+  const href = file ? driveView(file.id) : a.url!;
   return (
     <a className="anx" href={href} target="_blank" rel="noreferrer" title={a.t}>
       {children ?? `Anexo ${l}`}
@@ -37,9 +37,11 @@ export function AnexoChip({ l }: { l: string }) {
             <Icon name="doc" size={15} /> {file.label}
           </a>
         )}
-        <a href={a.url} target="_blank" rel="noreferrer" aria-label={`Abrir carpeta del anexo ${l} en Drive`}>
-          <Icon name="link" size={15} /> Carpeta
-        </a>
+        {a.url && (
+          <a href={a.url} target="_blank" rel="noreferrer" aria-label={`Abrir carpeta del anexo ${l} en Drive`}>
+            <Icon name="link" size={15} /> Carpeta
+          </a>
+        )}
       </div>
     </div>
   );

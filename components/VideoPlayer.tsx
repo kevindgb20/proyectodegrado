@@ -5,23 +5,16 @@ import { createPortal } from "react-dom";
 import { drivePreview, driveView } from "@/lib/drive";
 import { videoSrc, type Video } from "@/lib/media";
 
-/** Reproduce desde Drive si el video está allí; si no, desde el archivo local. */
 function Player({ video }: { video: Video }) {
-  const s = videoSrc(video.id);
-  return s.drive ? (
-    <iframe className="drive-player" src={drivePreview(s.drive)} title={video.title} allow="autoplay; fullscreen" allowFullScreen />
-  ) : (
-    <video className={video.vertical ? "vert" : ""} src={s.src} poster={s.poster} controls autoPlay playsInline />
-  );
+  return <iframe className="drive-player" src={drivePreview(videoSrc(video.id).drive)} title={video.title} allow="autoplay; fullscreen" allowFullScreen />;
 }
 
 function DriveLink({ video }: { video: Video }) {
-  const id = videoSrc(video.id).drive;
-  return id ? (
-    <a className="anx" href={driveView(id)} target="_blank" rel="noreferrer">
+  return (
+    <a className="anx" href={driveView(videoSrc(video.id).drive)} target="_blank" rel="noreferrer">
       Abrir en Drive ↗
     </a>
-  ) : null;
+  );
 }
 
 function Modal({ list, index, onClose, onGo }: { list: Video[]; index: number; onClose: () => void; onGo: (i: number) => void }) {

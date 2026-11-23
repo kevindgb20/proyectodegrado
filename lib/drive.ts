@@ -1,82 +1,101 @@
-// Archivos del proyecto en Google Drive (carpetas de los anexos del libro, compartidas con enlace).
-// Para pasar a Drive algo que aún sea local, basta con añadir aquí su ID.
+// Todo el material del proyecto, en Google Drive (carpeta compartida con enlace):
+// https://drive.google.com/drive/folders/1lAJBFZiE5tYgUtDLhGYG6wx6I4Yt25zS
 export const VIDEO_IDS: Record<string, string> = {
-  "herr-01": "1bOZ2Lq0qOhJIKoF0Kx2gPXKNz5OBZE6N",
-  "herr-02": "1OnifySrLJ8v6inZ8c_3AeZxxHYdhquWU",
-  "herr-03": "1FW5rJLYX9YhL07K34PerH4fv-0A5wSpU",
-  "herr-04": "1HDb2GdaIJz9sKJRK54UajhnJZE6VLhHc",
-  "herr-05": "1J2e9HthkETIu0wlD3nz8faYBuvVOOYto",
-  "herr-06": "1RpnJx8u00U2ThzXXsBfhqeTvNKd1AgM7",
-  "t1-ciberpunk": "1COTXn2ez8pEsSjuYlpVsL2gkqFIb3H1n",
-  "t1-ciberpunk-2": "1gGmby9uQKwdrUeRaWs8axokz5PejbAzh",
-  "t1-ciberpunk-3": "1C9EGrS1qMO3m_cSekBjPtAGuOiHND6as",
-  "t1-bpm": "1qw5DQiwpuz4Qs7MBc1Ls588CBRpNOXPp",
-  "t2-01": "11NDO2YtOc9NostIYDglf7oUj0kKWBKY9",
-  "t2-02": "1cqdlhVE8ShXCM4C9mR828JyH3_uR8j6n",
-  "t2-03": "14eCTQD00NjoPjzjhmR2rj4AvChZYTiTE",
-  "t2-04": "1HtohvyPJ0gMETDum5VnjmXOQPNAgU6Ux",
-  "t5-01": "1QDw8ZtomoQhcJsyHnCp57ltQlLDI-BhW",
-  "ms-overdrive-par": "1hJG--JdKlc_O3jX88EIW-8np7kgr5joZ",
-  "ms-overdrive-live": "1YgxtugjvWCcLHTPhzk9ljnBXveUUdurx",
-  "ms-3d-overdrive": "11v0gkrdzcGEYF7YF4A88LHKSfZcbumCI",
-  "ms-efectos-manual": "11KBzws2SOopuae_mxIP5nZzDHCJs6Fgg",
-  "ms-loopstation-3d": "1rY40C1SNE12Zc1Dp50Qx6zgEVaiOYdHg",
-  "ms-ismellfear-3d": "1_6MHLXFIMuXFcFhNX1lPo4HqhANxlGzV",
-  "ms-yiro-mp3": "1ozRCUGXOYLdfrTU453-YpFLQIDvz7VaZ",
-  "yiro-tema-2": "1rn7YEOffD-V5x0IAdIJDkEm5Yn81H2W7",
-  "yiro-megalodon": "1h0i0ZBCADDiICXpVln_QYmZXkQ9MF9zm",
-  "yiro-guaracha": "1fQRQCu-qjF5mtzUAVQ4CwMNxwHMeyOr4",
-  "yiro-guaracha-2": "1P6hhXmJ0Trv-_DiMAsMaT0k0KvmepViW",
-  "yiro-sonidos": "1KpXdJy2mFQZSYZc4_h7y-VZO-ZRmIYpj",
-  "experiencia": "10uRN29ihzqgUvY467rqT02h46pobts6W"
+  "resultado": "1DUaok-kiFGhR34NO3OaLcRQO41D99guI",
+  "proceso": "1XqJ0sFseb3VW7fF5pSwBk4ct-m75WPAR",
+  "renegade-gbb25": "13K_Op_IWdStAcp0iJqZ3xEYiSzSrX8K8",
+  "mvp": "1hDUsLABwBGxJNyDF2dDuImDAMWEkNAnG",
+  "herr-01": "1xO_-S28kY5SRZ1uNLvccoqyiAmuf4FGP",
+  "herr-02": "1JoUhzsxhqZlxtZFQ-CKXmAI462IWVuBa",
+  "herr-03": "17DvPqLg6oopp0vm2pY6Jkg9dRIJPfjK8",
+  "herr-04": "1tchqP69PidVHdwyFYuxEFl8gKs2qH89F",
+  "herr-05": "1ZTzuHrQL54JUcOC1n_9_fEUBRo5_pKGi",
+  "herr-06": "1D7wo2OQd6nDNsa3axHKFYpCZp5Ymuqka",
+  "t1-ciberpunk": "18OMz5Cak4SIxkkh2v2Dco36tQWXpiGDC",
+  "t1-ciberpunk-2": "1d2_rI8NCUXRm94KSXQN1xetIHdxgz9J2",
+  "t1-ciberpunk-3": "1ziDXlSb2EU0Nw-rQkv_cyX54NyFa939f",
+  "t1-bpm": "1hanHVSv18NhyLoXOOznfjJZRTnASGJGC",
+  "t2-01": "1jkZp8EQpF-k5bOIfpl2wvurvaRa7t1Uc",
+  "t2-02": "1k0BGtskYng0cIH7v_HBDNlKOzuby38aa",
+  "t2-03": "1RPXfN_Pz9JCJ0QNNXi9OVf7P9xjAm2Vd",
+  "t2-04": "1Dt2yBOWLilw54fTX83S5y8-5yFKb5-vl",
+  "t5-01": "1TnB4El9hHPeycYuIHiXlEPtXBI3LX95R",
+  "ms-overdrive-par": "1eRd3zb0xFP3r2nm2qThbZv3e_hoBvLVd",
+  "ms-overdrive-live": "1ipCxbI3bm7F3lDss72jAa-s91aPB3VPo",
+  "ms-3d-overdrive": "1-A1s4fYX3iVosA4hm4Z-_u3rLBenTAYO",
+  "ms-efectos-manual": "1FEk4u2wgMW9V_wwZrzNg985rDbMTXZ_8",
+  "ms-loopstation-3d": "1mE-Q6OGDExPCxG78wju0aEzhLDragMog",
+  "ms-ismellfear-3d": "1EQACXOi90LBU5dVbUJUfvoA5g95KPGy9",
+  "ms-yiro-mp3": "1ea19Y5iYpl_LGJ6dPlkQIpdzDrMLPX_B",
+  "yiro-tema-2": "1rNInvEb5AKBLqFzma2ZB4C4nTnwOElcC",
+  "yiro-megalodon": "1fAMAqpI3J5KExwgV0Pnilp6299fzT14g",
+  "yiro-guaracha": "1n6PQn-IdyIl41WyZ7fDgpIJpKEEXCBZk",
+  "yiro-guaracha-2": "1wFc-LN1GPSDtqUbCmPVyu9RO_UmxZhRk",
+  "yiro-sonidos": "1DWLf1jF4hAcBiqfbLUWBWRvEQDADbky3",
+  "experiencia": "1l9yXa7JmBG1XIxZVdEzvp-buSwQGciwQ"
 };
 
 export const IMAGE_IDS: Record<string, string> = {
-  "t3-1": "1hBt_ftrVsFndCTKP9c98ZqdDAOWiO822",
-  "t3-2": "1CVvploLWhXs79XgSuzSjtyU08kp72qAO",
-  "t6-1": "1aUmQthee_PSxMeqlze0vgIq6NlKdGsXR",
-  "t6-2": "141lZJeHPhBg0aF_uMl1PcD6x6AXLL6HX",
-  "t6-3": "12JajDLI6pH8vafC-QHp2sLVh4qd0lP9y",
-  "t6-4": "1J-7LtHaqNO7qrMS9JgWtl3jTH29lRm55",
-  "11-el-prompt": "1d2EJyNt1-D72UdhIEc89WlJYBE1aFxgv"
+  "t3-1": "1Bi13MnGEGkATT_utWjlr72a8UhieoFb1",
+  "t3-2": "172QEkr9ZqG2DJfh9oi66wp18CMMRlUOu",
+  "t6-1": "1bt8PN9AyCgmqXRoexZ-cbtQz8mJwGyxz",
+  "t6-2": "1p0ht-0I6vgqqsBC0koBWWQDHu2q2CV7K",
+  "t6-3": "1wm3EFCxF9dN3NtPVJM8tLE0PfckV_6Sv",
+  "t6-4": "1wrxozyeU5aFNoNxs1sfPEsQIqnxtbAB2",
+  "01-planteamiento": "1H5gQfVLtLmqnK2OGf5uo5rZIuxv6AQUH",
+  "02-metodologia": "1vhyBwlt5vj1JTR2SeEqOTNj9IsRWvRLt",
+  "03-usuario-y-actores": "1RuDDxtcmuPmDhobTW8wfnm1qzaYoqZbw",
+  "04-momentos-significativos": "1vS_3XFTBMHyc4Lu46v8dra9EFTyMwNqp",
+  "05-roadmap-y-testeos": "1LqKuVaP2LFXSjjGAS7cRJgS1tFJ_xmiK",
+  "06-conclusiones": "1EQtngdRLtrDMwtIAWJCqi7QkxjxxjDrI",
+  "07-mystrow-hallazgos": "1258ZL_oBpdwle1Ndh9I0RCT8oGZE0t5N",
+  "08-loopstation": "1TXe71cgoglDW72BOovF1ddEoOqfbyQWz",
+  "09-la-herramienta": "1VWsVmqWUEP8GtoTEzerj8l85sM3NGB7D",
+  "10-mahiro-renegade": "1k20jetwmj0EhWVteNjqDAC6qYkKsquFU",
+  "11-el-prompt": "1NI514to1j95x-j_xZSOSD0EcabjyHAsJ",
+  "12-testeos-antes-despues": "1e6kldkn_CBe-3yXlBVqrhvJuxrYQK3Kx"
 };
 
 export const ANEXO_FILES: Record<string, { label: string; id: string }> = {
   "B": {
     "label": "Entrevista (PDF)",
-    "id": "1nbaUcMWszpjcmjD_R6aCgVuvvQsOuWrf"
+    "id": "1N8ZWm9uoD3FZ9GB8KRYqb9x9fHJNag_r"
   },
   "C": {
-    "label": "Letra original",
-    "id": "1IdSpY0J7PcXbmN8nHvE_Z0aZctVzZk1-"
+    "label": "Letra y traducción (PDF)",
+    "id": "1uxEsBBIo0tCeJxlm7w9-AmKHKK-BDYQE"
   },
   "D": {
     "label": "Formato (PDF)",
-    "id": "1QdrPQZmkHhrEMNDCBPFamu72pryogYCI"
+    "id": "1GYn4357T0OHba9S71cYSxN6pYE8sIoLv"
   },
   "E": {
     "label": "Formato (PDF)",
-    "id": "1-qJg8gO8CTSCepSCtbzsLDLkxH1s3QTQ"
+    "id": "1Z4K6tmbB1tSTsS7km7NPIn1G5Zn46LFW"
   },
   "F": {
     "label": "Respuestas (PDF)",
-    "id": "12vwJYe6qCrL1CYnGqVDt0FpAQxSOwL_G"
+    "id": "1bK6hFvJTwgK7C5A3iabHBrsoIoueUW8I"
   },
   "G": {
     "label": "Formato (PDF)",
-    "id": "130jru6CZvaJL91tCafKmgJqU-Ndnco3R"
+    "id": "1ICuYp3xH_8kFRBx52S1-YLx6VYNM9GQH"
   },
   "H": {
     "label": "Formato (PDF)",
-    "id": "1BeLjFinRQINhmSlf_ICdnVoYbfyTBsqZ"
+    "id": "1suM7nvPIWx8-It8oR_ijD5m3MbHom_Yt"
   },
   "I": {
     "label": "Respuestas (PDF)",
-    "id": "1XqoFgRucy2yS0HMK7AaAnccvYrZGk-FM"
+    "id": "1b3phdW20UCzsql_voO67URmpMSDsTdeo"
   },
   "K": {
     "label": "Prompt",
-    "id": "1d2EJyNt1-D72UdhIEc89WlJYBE1aFxgv"
+    "id": "1NI514to1j95x-j_xZSOSD0EcabjyHAsJ"
+  },
+  "L": {
+    "label": "Video",
+    "id": "1hDUsLABwBGxJNyDF2dDuImDAMWEkNAnG"
   }
 };
 
@@ -84,5 +103,7 @@ export const driveView = (id: string) => `https://drive.google.com/file/d/${id}/
 export const drivePreview = (id: string) => `https://drive.google.com/file/d/${id}/preview`;
 export const driveImage = (id: string, w: number) => `https://lh3.googleusercontent.com/d/${id}=w${w}`;
 
-// Todavía no está en las carpetas compartidas de Drive: se sirve desde public/media.
-export const LIBRO = "/media/doc/del-sonido-a-la-luz-libro.pdf";
+export const LIBRO = driveView("1cvY9vyTyCu3VsZo6zIftr6iL9HsK6n-B");
+
+// El mapa del prompt necesita un archivo propio: el reproductor de Drive no informa en qué segundo va.
+export const PROMPT_VIDEO = "/media/v/renegade-gbb25.mp4";
